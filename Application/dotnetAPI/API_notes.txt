@@ -39,4 +39,7 @@ do the Migration:
 
 
 Create Products Controller
+    Create API under that and test 
+
+Create dotnet new gitignore file that excluds all un neccesory files
 
