@@ -1,0 +1,42 @@
+Steps:
+(check "MyComment" in code)
+
+Create the Solution
+    Create Dotnet Solution for DotnetAPI
+
+Create webAPI project
+    Create WebAPI project Name API
+    this contains default files including program.cs and weather forcasting
+    Program.cs is starting file of Application
+
+Add webAPI project to Solution
+    Add the API project in the Solution
+    CONfigure the properties/launchSettings.json to set the launch CONfigure which will run with "dotnet run"
+
+Add Entities
+    Create Entities folder to keep classes of the product and other items
+
+Add NugetPackages(design and sqlite)
+
+Add StoreContext
+    Create DatFolder with Class of DB using DB context and entity framework 
+    Add the Dbconfiguration ConnetionString in the APPsetting.json
+    Add Dbcontext to the builder in the program.cs using contructor of the StoreContext and use APPsetting ConnetionString
+    Create DBinitializer to seed the data in the db and seed the data in product classes
+
+do the Migration:
+    (Migration is the process to create and update the Database project using the dotnet tool so that we do not need to handle the sql code our self )
+    (with eatch time we make any change in the class of data we can update the database using the migration)
+    (its same a version control for database project)
+    Way to do the Migration:
+        way1:
+            use CLI and create migration 
+            use CLI to update the database
+        way2:
+            create scope of the DBContext in the program.cs
+            create context of the create scope
+            use try catch block in and create migration in program.cs(so that at the start of project migration hanldes automatically)
+
+
+Create Products Controller
+
